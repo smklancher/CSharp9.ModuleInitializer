@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Stephen Klancher</Authors>
+    <Version>0.0.3</Version>
+    <Description>Allows older .NET Framework versions to use the C# 9 ModuleInitializer attribute, otherwise only available in .NET 5.
+Details:
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/general#moduleinitializer-attribute
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-9.0/module-initializers</Description>
+    <PackageTags>CSharp9;backport;polyfill;ModuleInitializer</PackageTags>
+    <PackageId>CSharp9.ModuleInitializer</PackageId>
+    <Product>CSharp9.ModuleInitializer</Product>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <RepositoryUrl>https://github.com/smklancher/CSharp9.ModuleInitializer</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NoBuild>true</NoBuild>
+    <!-- Easier source only package: https://gist.github.com/attilah/fd3e71f03fd258c496179e0200c57b0b#gistcomment-3686577  -->
+    <PackBuildOutput>false</PackBuildOutput>
+    <PackCompile>true</PackCompile>
+    <PackEmbeddedResource>true</PackEmbeddedResource>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGetizer" Version="0.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
